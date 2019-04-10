@@ -5,6 +5,7 @@ var streamInput = document.getElementById("input-value");
 const list = document.getElementById("results");
 
 form.addEventListener("submit", function(e) {
+  list.innerHTML = "";
   e.preventDefault();
   var streamName = document.getElementById("input-value").value;
 
@@ -90,17 +91,20 @@ function runStream(streamerNick) {
   list.innerHTML = "";
   streamInput.value = "";
 }
-
-fetch("https://api.twitch.tv/kraken/user", {
-  method: "GET",
-  headers: {
-    "Client-ID": "2ycfvm2b45t59j4t37qbz5wt8hhfso",
-    Accept: "application/vnd.twitchtv.v5+json"
-  }
-})
-  .then(data => {
-    return data.json();
-  })
-  .then(data => {
-    console.log(data);
-  });
+// fetch(
+//   "https://id.twitch.tv/oauth2/authorize?response_type=token&client_id=2ycfvm2b45t59j4t37qbz5wt8hhfso&redirect_uri=http://localhost:5500&scope=viewing_activity_read&state=c3ab8aa609ea11e793ae92361f002671",
+//   {
+//     method: "GET",
+//     headers: {
+//       "Client-ID": "2ycfvm2b45t59j4t37qbz5wt8hhfso",
+//       Authorization: "OAuth",
+//       Accept: "application/vnd.twitchtv.v5+json"
+//     }
+//   }
+// )
+//   .then(data => {
+//     return data.json();
+//   })
+//   .then(data => {
+//     console.log(data);
+//   });

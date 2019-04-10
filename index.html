@@ -6,32 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Twitch Light</title>
     <link rel="icon" type="image/png" href="/twitch.png" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" type="text/css" href="glider/glider.css" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <style>
-      .list-group-item:hover {
-        cursor: pointer;
-      }
-      .btn {
-        background-color: #8e44ad;
-        color: white;
-      }
-      .btn:hover {
-        color: white;
-        background-color: #6c2f86;
-      }
-      body {
-        background-color: #0e1318;
-      }
-      .item {
-        background-color: #1f2a36;
-        color: white;
-      }
-    </style>
     <title>Document</title>
     <style>
       * {
@@ -49,9 +31,14 @@
       }
     </style>
   </head>
-  <body>
-    <div id="stream"></div>
+  <body style="background-color: black; color: white">
+    <nav class="navbar py-2">
+      <div class="container">
+        <a class="navbar-brand" href="#">Twitch Light </a>
+      </div>
+    </nav>
 
+    <div id="stream"></div>
     <div class="container">
       <div class="form form-group center">
         <form action="" id="load-stream">
@@ -68,11 +55,26 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="container search">
       <ul class="list-group row" id="results"></ul>
     </div>
 
+    <div class="container">
+      <h1 class="my-5">Following Channels</h1>
+      <!-- <div class="card-columns" id="followers"></div> -->
+      <div class="glider-contain">
+        <div class="glider" id="followers"></div>
+        <button role="button" aria-label="Previous" class="glider-prev">
+          «
+        </button>
+        <button role="button" aria-label="Next" class="glider-next">»</button>
+        <div role="tablist" class="dots"></div>
+      </div>
+    </div>
+    <script src="glider/glider.js"></script>
     <script src="streamer.js"></script>
+    <script src="followers.js"></script>
+
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -90,3 +92,9 @@
     ></script>
   </body>
 </html>
+
+<!-- <div class="channel" onclick="runStream('${url}')">
+  <img src="'${banner}'" alt="">
+  <h3>${nick} playing ${game}</h3>
+  <p>${decription}</p>
+</div> -->

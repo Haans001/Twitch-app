@@ -1,0 +1,40 @@
+.list-group-item:hover {
+  cursor: pointer;
+}
+.btn {
+  background-color: #8e44ad !important;
+  color: white !important;
+}
+.btn:hover {
+  color: white;
+  background-color: #6c2f86;
+}
+body {
+  background-color: #1e2225;
+}
+.item {
+  background-color: #1f2a36;
+  color: white;
+}
+
+.channel:hover {
+  cursor: pointer;
+}
+
+.glider-track,
+.glider {
+  overflow: hidden;
+}
+
+.navbar {
+  background-color: #8e44ad;
+  color: white;
+}
+
+.navbar a {
+  color: white;
+}
+.navbar a:hover {
+  text-decoration: none;
+  color: white;
+}
