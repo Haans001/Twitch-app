@@ -5,7 +5,6 @@ var streamInput = document.getElementById("input-value");
 const list = document.getElementById("results");
 
 form.addEventListener("submit", function(e) {
-  list.innerHTML = "";
   e.preventDefault();
   var streamName = document.getElementById("input-value").value;
 
@@ -31,6 +30,7 @@ form.addEventListener("submit", function(e) {
       >
       </iframe>
       `;
+  list.innerHTML = "";
 });
 
 streamInput.addEventListener("keyup", function() {
